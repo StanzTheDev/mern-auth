@@ -6,6 +6,10 @@ import connectDB from './config/db.js';
 import cookieParser from 'cookie-parser';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import userRoutes from './routes/userRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
+import cors from 'cors';
+
+
 
 const port = process.env.PORT || 5000;
 
@@ -18,8 +22,25 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-app.use('/api/users', userRoutes);
 
+// Move CORS middleware before routes
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = ['http://localhost:5173'];
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
+app.use('/api/users', userRoutes);
+app.use('/api/tasks', taskRoutes);  
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
   app.use(express.static(path.join(__dirname, '/frontend/dist')));

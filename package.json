@@ -1,6 +1,7 @@
 {
   "name": "mern-auth",
   "version": "1.0.0",
+  "proxy": "http://localhost:5000",
   "type": "module",
   "description": "MERN authentication system",
   "main": "server.js",
@@ -13,16 +14,27 @@
   "author": "Brad Traversy",
   "license": "MIT",
   "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^1.7.7",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
-    "dotenv": "^16.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.1.0"
+    "lucide-react": "^0.469.0",
+    "mongoose": "^7.8.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-select": "^5.9.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "concurrently": "^8.0.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
   }
 }

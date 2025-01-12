@@ -1,14 +1,17 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import {Row, Col } from 'react-bootstrap';
+import '../register.css'
 
 const FormContainer = ({ children }) => {
   return (
-    <Container>
-      <Row className='justify-content-md-center mt-5'>
-        <Col xs={12} md={6} className='card p-5'>
-          {children}
-        </Col>
-      </Row>
-    </Container>
+<div className='custom-container'>
+  <Row className='justify-content-md-center mt-5'>
+    <Col xs={12} md={6} className='card'>
+      {children}
+    </Col>
+  </Row>
+</div>
+
+  
   );
 };
 

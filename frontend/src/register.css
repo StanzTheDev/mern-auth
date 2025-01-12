@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* Update your register.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+ 
+
+#l-h1{
+    font-family: 'Poppins', sans-serif;
+   font-weight: 500;   
+}
+  
+  #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+.page-container {
+    min-height: 100vh;
+    max-height: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('hassaan-here-bKfkhVRAJTQ-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0; 
+    margin: 0; 
+}
+#btn{
+    background-color: #969ae3;
+}
+.custom-container {
+    max-width: 1900px; 
+    margin: 0 auto;
+  }
+  @media(min-width: 768px) and (max-width: 991px) {
+    .custom-container {
+      padding: 2rem; /* Adjust padding for tablets */
+      max-width: 1900px; /* Custom width for tablet screens */
+    }
+  
+  }
+  .h1{
+    color: #444444;
+  }
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 100%; /* Full width on mobile */
+    height: 100vh; /* Full height */
+    margin: 0; /* Remove margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#bg{
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  min-height: 100vh;
+    /* background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),url('walls-io-vO6dmS6WTb0-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 550px; */
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+}
+
+.background-accent {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.4), transparent);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  /* Position them in different corners */
+  .accent-top-left {
+    top: -100px;
+    left: -100px;
+  }
+  
+  .accent-bottom-right {
+    bottom: -100px;
+    right: -100px;
+  }
+  
+/* Add media query for larger screens */
+@media (min-width: 768px) {
+    .glass-container {
+        height: auto;
+        max-width: 400px;
+        margin: 20px;
+    }
+    
+
+
+    .page-container {
+        backdrop-filter: blur(10px);
+        max-height: 800px;
+    }
+}
+
+.glass-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.glass-container label {
+    color: black;
+}
+
+.glass-container input {
+    background: #FFF0F0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: black;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+#input{
+    background: rgba(255, 255, 255, 0.1);
+}
+.glass-container input::placeholder {
+    color: #444444;
+    padding: 5px;
+}
+
+.glass-container button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.glass-container button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Remove any Bootstrap margins/padding that might interfere */
+.row, .col {
+    margin: 0;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style the link at the bottom */
+.glass-container a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Center the loader if present */
+.loader {
+    text-align: center;
+    margin-top: 10px;
+}
